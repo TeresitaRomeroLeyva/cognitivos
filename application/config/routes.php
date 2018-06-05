@@ -53,3 +53,5 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route["registro"]["get"]="Check_in/register";
+$route["registro"]["post"]="Check_in/very_register";

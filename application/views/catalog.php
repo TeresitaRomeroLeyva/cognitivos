@@ -24,7 +24,7 @@
                                         </ul>
                                         <!-- pricing action -->
                                         <div class="pricing-action">
-                                             <a class="btn-medium btn btn-circle bg-blue text-white no-letter-spacing " href="paymentCard.php"><span class="tz-text">Tarjeta débito/crédito</span></a>
+                                             <a class="btn-medium btn btn-circle bg-blue text-white no-letter-spacing " href="<?php echo base_url()?>Payment/paymentCard"><span class="tz-text">Tarjeta débito/crédito</span></a>
                                              <img class="padding-eight-bottom" src="<?php echo base_url("assets/images/bg-image/cards151x30.png");?>" width="151" alt="cards">
                                              <a class=" btn-medium btn btn-circle bg-blue text-white no-letter-spacing " data-toggle="modal" data-target="#miModal" href="#"><span class="tz-text">Paga en efectivo</span></a>
                                              <img src= "<?php echo base_url("assets/images/bg-image/stores151x30.webp");?>" width="151" alt="cards">
@@ -62,7 +62,7 @@
                                         </ul>
                                         <!-- pricing action -->
                                         <div class="pricing-action">
-                                            <a class="btn-medium btn btn-circle bg-blue text-white no-letter-spacing " href="paymentCard.php"><span class="tz-text">Tarjeta débito/crédito</span></a>
+                                            <a class="btn-medium btn btn-circle bg-blue text-white no-letter-spacing " href="<?php echo base_url()?>Payment/paymentCard"><span class="tz-text">Tarjeta débito/crédito</span></a>
                                              <img class="padding-eight-bottom" src="<?php echo base_url("assets/images/bg-image/cards151x30.png");?>" width="151" alt="cards">
                                            
                                             <a class=" btn-medium btn btn-circle bg-blue text-white no-letter-spacing " data-toggle="modal" data-target="#miModal" href="#"><span class="tz-text">Paga en efectivo</span></a>
@@ -97,7 +97,7 @@
                                         <!-- pricing action -->
                                     
                                         <div class="pricing-action">
-                                       <a class="btn-medium btn btn-circle bg-blue text-white no-letter-spacing " href="paymentCard.php"><span class="tz-text">Tarjeta débito/crédito</span></a>
+                                       <a class="btn-medium btn btn-circle bg-blue text-white no-letter-spacing " href="<?php echo base_url()?>Payment/paymentCard"><span class="tz-text">Tarjeta débito/crédito</span></a>
                                        <img class="padding-eight-bottom" src="<?php echo base_url("assets/images/bg-image/cards151x30.png");?>" width="151" alt="cards">
 
 

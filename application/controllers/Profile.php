@@ -10,7 +10,7 @@ class Profile extends CI_Controller {
     $data['test'] = "mensaje de prueba";
 
 		
-		$this->load->view('miCuenta',$data);
+		$this->load->view('myProfile',$data);
 		
     }
 }

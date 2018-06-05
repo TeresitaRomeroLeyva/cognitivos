@@ -7,9 +7,10 @@ class Catalog extends CI_Controller {
     public function catalog1()
     {
     $data['test'] = "mensaje de prueba";
+    $this->load->database();
 
 		$this->load->view('header2',$data);
-		$this->load->view('Catalogo',$data);
+		$this->load->view('catalog',$data);
 		$this->load->view('footer',$data);
     }
 }

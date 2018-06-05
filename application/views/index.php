@@ -64,11 +64,11 @@
                             </button>
                             <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse pull-right">
                                  <ul class="nav navbar-nav">
-                                        <li class="propClone"><a class="inner-link" href="index.php" >Inicio</a></li>
-                                        <li class="propClone"><a class="inner-link" href="miCuenta.php" >Perfil</a></li>
-                                        <li class="propClone"><a class="inner-link" href="Catalogo.php" >Catalogo</a></li>
-                                        <li class="nav-button propClone float-left btn-medium sm-no-margin-tb sm-no-margin-left"><a href="register.php" class="btn-medium btn btn-circle bg-blue text-black no-letter-spacing">Registrarme</a> </li>
-                                        <li class="nav-button propClone float-left btn-medium sm-no-margin-tb sm-no-margin-left"><a href="iniciarsesion.php" class="btn-medium btn btn-circle bg-blue text-black no-letter-spacing">Iniciar sesion</a> </li>
+                                        <li class="propClone"><a class="inner-link" href="<?php echo base_url()?>Index/inicio" >Inicio</a></li>
+                                        <li class="propClone"><a class="inner-link" href="<?php echo base_url()?>Profile/myProfile">Perfil</a></li>
+                                        <li class="propClone"><a class="inner-link" href="<?php echo base_url()?>Catalog/catalog1" >Catalogo</a></li>
+                                        <li class="nav-button propClone float-left btn-medium sm-no-margin-tb sm-no-margin-left"><a href="<?php echo base_url()?>Check_in/register" class="btn-medium btn btn-circle bg-blue text-black no-letter-spacing">Registrarme</a> </li>
+                                        <li class="nav-button propClone float-left btn-medium sm-no-margin-tb sm-no-margin-left"><a href="<?php echo base_url()?>Log_in/login" class="btn-medium btn btn-circle bg-blue text-black no-letter-spacing">Iniciar sesion</a> </li>
 
                                     </ul>
                             </div>
@@ -117,7 +117,7 @@
                         <!-- end section title -->
                         <!-- image -->
                         <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-                            <img class="margin-thirteen-bottom xs-margin-twenty-seven-bottom" src="<?php echo base_url("images/application-about-mobile.png");?>" data-img-size="(W)958px X (H)115px" alt="">
+                            <img class="margin-thirteen-bottom xs-margin-twenty-seven-bottom" src="<?php echo base_url("assets/images/application-about-mobile.png");?>" data-img-size="(W)958px X (H)115px" alt="">
                         </div>
                         <!-- end image -->
                     </div>                    

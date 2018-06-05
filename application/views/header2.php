@@ -3,7 +3,7 @@
 
     <head>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url("/assets/css/bootstrap.min.css");?>">
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/style.css">
+        
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,11 +63,12 @@
                                 </button>
                                 <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse pull-right">
                                     <ul class="nav navbar-nav">
-                                        <li class="propClone"><a class="inner-link" href="index" >Inicio</a></li>
-                                        <li class="propClone"><a class="inner-link" href="<?php echo base_url();?>miCuenta.php/Porfile/myPorfile" >Perfil</a></li>
-                                        <li class="propClone"><a class="inner-link" href="Catalogo.php" >Catalogo</a></li>
-                                         <li class="nav-button propClone float-left btn-medium sm-no-margin-tb sm-no-border"><a href="register.php" class="btn-medium btn btn-circle bg-blue text-white no-letter-spacing" >Registrarme</a> </li>
-                                        <li class="nav-button propClone float-left btn-medium sm-no-margin-tb sm-no-margin-left"><a href="iniciarsesion.php" class="btn-medium btn btn-circle bg-blue text-white no-letter-spacing">Iniciar sesion</a> </li>
+                                       <li class="propClone"><a class="inner-link" href="<?php echo base_url()?>Index/inicio" >Inicio</a></li>
+                                        <li class="propClone"><a class="inner-link" href="<?php echo base_url()?>Profile/myProfile">Perfil</a></li>
+                                        <li class="propClone"><a class="inner-link" href="<?php echo base_url()?>Catalog/catalog1" >Catalogo</a></li>
+                                        <li class="nav-button propClone float-left btn-medium sm-no-margin-tb sm-no-margin-left"><a href="<?php echo base_url()?>Check_in/register" class="btn-medium btn btn-circle bg-blue text-black no-letter-spacing">Registrarme</a> </li>
+                                        <li class="nav-button propClone float-left btn-medium sm-no-margin-tb sm-no-margin-left"><a href="<?php echo base_url()?>Log_in/login" class="btn-medium btn btn-circle bg-blue text-black no-letter-spacing">Iniciar sesion</a> </li>
+
                                     </ul>
                                 </div>
                             </div>
