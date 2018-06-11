@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Profile extends CI_Controller {
 
 
-    public function myProfile()
+    public function Index()
     {
     $data['test'] = "mensaje de prueba";
 

@@ -17,7 +17,7 @@
                          
                            
                            
-                             <li class="propClone col-md-4 col-sm-12 col-xs-12 txtcenter"><a class="inner-link sm-text-center " href="<?php echo base_url()?>Privacity/privacity1" >Aviso de privacidad</a></li>
+                             <li class="propClone col-md-4 col-sm-12 col-xs-12 txtcenter"><a class="inner-link sm-text-center " href="<?php echo base_url()?>Privacity" >Aviso de privacidad</a></li>
                        
                         
                        

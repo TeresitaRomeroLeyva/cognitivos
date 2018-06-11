@@ -10,11 +10,11 @@
                         <div class="col-md-offset-3 col-sm-offset-3 col-md-6 col-sm-6 col-xs-12 col txtcenter" >
                             <div class="padding-four bg-black-light-rgba tz-background-color xs-padding-eleven border-radius-8 col-lg-12 ">
                                 <h5 class="alt-font font-weight-100 text-white display-block tz-text margin-fifteen-bottom font-size:2.2em" >Registro</h5>
-                                <form name="registrarme" action="<?=base_url().'very_register'?>">
+                             <form  action="Check_in/save" method="POST">
                                   <div class="row">
                                     <div class="col-md-6">
                                   
-                                      <input  value="" type="text" class="form-control border-radius-8" name="name" placeholder="* Nombre(s)">
+                                      <input  value="" type="text" class="form-control border-radius-8" name="username" placeholder="* Nombre(s)">
                                     </div>
                                     <div class="col-md-6">
                                       <input for="" value="" type="text" class="form-control border-radius-8" name="last_name" placeholder="* Apellidos">
@@ -56,7 +56,7 @@
                                   </div>
 
 
-                                 <button  class= "btn-medium btn btn-circle bg-blue text-white no-letter-spacing" name="submit" value="Registrar"  type="submit">Registrar</button> 
+                                 <button  class= "btn-medium btn btn-circle bg-blue text-white no-letter-spacing" name="submit" value="Registro"  type="submit">Registrar</button> 
                                 </form>
                             </div>
                             

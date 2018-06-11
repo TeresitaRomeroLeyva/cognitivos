@@ -12,10 +12,10 @@
                             <div class="padding-eighteen bg-black-light-rgba tz-background-color xs-padding-eleven border-radius-8">
                                 <h5 class="alt-font font-weight-100 text-white display-block tz-text margin-fifteen-bottom font-size: 2.2em" >Entrar a MPCognitivos</h5>
                                 <form action="" method="POST">
-                                    <label for="username"></label>
-                                    <input type="text" name="username" data-email="required" id="username" placeholder="* Tu Correo Electronico" class="medium-input  border-radius-8">   
-                                    <label for="password"></label>                                 
-                                    <input type="password" name="password" data-email="required" id="password" placeholder="* Tu Contraseña" class="medium-input  border-radius-8">                                    
+                                   
+                                    <input type="text" name="username" data-email="required" id="username" placeholder="* Tu nombre" class="medium-input  border-radius-8">   
+                                   
+                                    <input type="password"  name="password" data-email="required" id="password" placeholder="* Tu Contraseña" class="medium-input  border-radius-8">                                    
                                                       
                                      <button  class= "btn-medium btn btn-circle bg-blue text-white no-letter-spacing" value="Ingresar" type="submit"> Ingresar</button>                                      
                                 </form>

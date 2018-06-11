@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Catalog extends CI_Controller {
 
 
-    public function catalog1()
+    public function Index()
     {
     $data['test'] = "mensaje de prueba";
     $this->load->database();
