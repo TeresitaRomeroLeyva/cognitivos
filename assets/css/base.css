@@ -42,7 +42,7 @@ a { text-decoration: none; color:#4e4e4e; cursor: pointer !important; outline: 0
 a:hover, a:focus{ text-decoration: none;}
 a:focus {outline: none; }
 img { max-width:100%; height:auto; -webkit-backface-visibility: hidden; }
-p {margin:0 0 22px 0}
+/*p {margin:0 0 0px 0 }*/
 video { background-size: cover; display: table-cell; vertical-align: middle; width: 100%; }
 ul, ol{ margin: 0px; }
 input, button, button:focus {outline: 0;}
@@ -1265,7 +1265,7 @@ section {border-bottom:1px solid #ececec}
 .input-group-btn .btn.btn-large {line-height:2px; height:62px; padding:15px 25px!important}
 .input-group input.tz_input_error, .input-group textarea.tz_input_error, .input-group select.tz_input_error { border-color: #dd1c1c !important;}
 
-#success { clear: both; margin: 0 15px 20px; text-align: center; background-color: #6dc13a; border: 2px solid #6dc13a; color: #fff; padding: 10px 0; display: block; }
+#success { clear: both; margin: 0 15px 20px; text-align: center;/* background-color: #6dc13a;*/ border: 2px solid #6dc13a; color: #fff; padding: 10px 0; display: block; }
 #error { clear: both; margin: 0 15px 20px; text-align: center; background-color: #ec2313; border: 2px solid #ec2313; color: #fff; padding: 10px 0; display: block; }
 .g-recaptcha {margin:0 0 20px 0}
 .google-recaptcha-error {color:#ec2313; display:block; margin: 0 0 25px 0}

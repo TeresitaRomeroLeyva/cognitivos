@@ -1,7 +1,4 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
-    <head>
+ <head>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url("/assets/css/bootstrap.min.css");?>">
         
 
@@ -63,11 +60,17 @@
                                 </button>
                                 <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse pull-right">
                                     <ul class="nav navbar-nav">
-                                       <li class="propClone"><a class="inner-link" href="<?php echo base_url()?>Home" >Inicio</a></li>
-                                    
-                                        <li class="propClone"><a class="inner-link" href="<?php echo base_url()?>Catalog" >Catalogo</a></li>
-                                        <li class="nav-button propClone float-left btn-medium sm-no-margin-tb sm-no-margin-left"><a href="<?php echo base_url()?>Check_in" class="btn-medium btn btn-circle bg-blue text-white no-letter-spacing">Registrarme</a> </li>
-                                        <li class="nav-button propClone float-left btn-medium sm-no-margin-tb sm-no-margin-left"><a href="<?php echo base_url()?>Log_in" class="btn-medium btn btn-circle bg-blue text-white no-letter-spacing">Iniciar sesion</a> </li>
+                                        <li class="propClone"><a class="inner-link" href="<?php echo base_url()?>Home2" >Inicio</a></li>
+                                        <li class="propClone"><a class="inner-link" href="<?php echo base_url()?>Catalog2" >Catalogo</a></li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 
+                                                <i class="fa fa-user fa-fw"></i><?=$this->session->userdata('username')?><b class="caret"></b>
+                                            </a>
+                                        <ul class="dropdown-menu text-black">
+                                        <li class="propClone "><a class="inner-link" href="<?php echo base_url()?>Profile">Perfil</a></li>
+                                        <li class="propClone"><a class="inner-link" href="<?php echo base_url()?>Home">Salir</a></li>
+                                         </ul>
+                                         </li>
 
                                     </ul>
                                 </div>
@@ -76,5 +79,3 @@
                     </div>
                 </nav> 
             </header>
-                <!-- end nav -->
-            </div>

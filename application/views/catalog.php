@@ -1,3 +1,6 @@
+ 
+
+
  <section id="pricing-table6" class="padding-110px-tb position-relative cover-background tz-builder-bg-image border-none xs-padding-60px-tb bgFoto2" data-img-size="(W)1920px X (H)900px" >
                 <div class="container position-relative">
                     <div class="row">
@@ -24,9 +27,9 @@
                                         </ul>
                                         <!-- pricing action -->
                                         <div class="pricing-action">
-                                             <a class="btn-medium btn btn-circle bg-blue text-white no-letter-spacing " href="<?php echo base_url()?>Payment"><span class="tz-text">Tarjeta débito/crédito</span></a>
+                                             <a class="btn-medium btn btn-circle bg-blue text-white no-letter-spacing " href="Log_in"><span class="tz-text">Tarjeta débito/crédito</span></a>
                                              <img class="padding-eight-bottom" src="<?php echo base_url("assets/images/bg-image/cards151x30.png");?>" width="151" alt="cards">
-                                             <a class=" btn-medium btn btn-circle bg-blue text-white no-letter-spacing " data-toggle="modal" data-target="#miModal" href="#"><span class="tz-text">Paga en efectivo</span></a>
+                                             <a class=" btn-medium btn btn-circle bg-blue text-white no-letter-spacing " href="Log_in"><span class="tz-text">Paga en efectivo</span></a>
                                              <img src= "<?php echo base_url("assets/images/bg-image/stores151x30.webp");?>" width="151" alt="cards">
                                              
                                         </div>
@@ -62,10 +65,10 @@
                                         </ul>
                                         <!-- pricing action -->
                                         <div class="pricing-action">
-                                            <a class="btn-medium btn btn-circle bg-blue text-white no-letter-spacing " href="<?php echo base_url()?>Payment"><span class="tz-text">Tarjeta débito/crédito</span></a>
+                                            <a class="btn-medium btn btn-circle bg-blue text-white no-letter-spacing " href="Log_in"><span class="tz-text">Tarjeta débito/crédito</span></a>
                                              <img class="padding-eight-bottom" src="<?php echo base_url("assets/images/bg-image/cards151x30.png");?>" width="151" alt="cards">
                                            
-                                            <a class=" btn-medium btn btn-circle bg-blue text-white no-letter-spacing " data-toggle="modal" data-target="#miModal" href="#"><span class="tz-text">Paga en efectivo</span></a>
+                                            <a class=" btn-medium btn btn-circle bg-blue text-white no-letter-spacing "href="Log_in"><span class="tz-text">Paga en efectivo</span></a>
                                             <img src= "<?php echo base_url("assets/images/bg-image/stores151x30.webp");?>" width="151" alt="cards">
                                         </div>
                                         <!-- end pricing action -->
@@ -97,11 +100,11 @@
                                         <!-- pricing action -->
                                     
                                         <div class="pricing-action">
-                                       <a class="btn-medium btn btn-circle bg-blue text-white no-letter-spacing " href="<?php echo base_url()?>Payment"><span class="tz-text">Tarjeta débito/crédito</span></a>
+                                       <a class="btn-medium btn btn-circle bg-blue text-white no-letter-spacing " href="Log_in"><span class="tz-text">Tarjeta débito/crédito</span></a>
                                        <img class="padding-eight-bottom" src="<?php echo base_url("assets/images/bg-image/cards151x30.png");?>" width="151" alt="cards">
 
 
-                                            <a class=" btn-medium btn btn-circle bg-blue text-white no-letter-spacing " data-toggle="modal" data-target="#miModal" href="#"><span class="tz-text">Paga en efectivo</span></a>
+                                            <a class=" btn-medium btn btn-circle bg-blue text-white no-letter-spacing " href="Log_in"><span class="tz-text">Paga en efectivo</span></a>
                                              <img src= "<?php echo base_url("assets/images/bg-image/stores151x30.webp");?>" width="151" alt="cards">
                                               
                                         </div>
@@ -112,31 +115,6 @@
                             </div>
 
                                         <!-- end pricing action -->
-                        </div>
-                        <div class="modal" id="miModal"  >
-                            <div class="modal-dialog" role="document">
-                                <div class="bg-dark-blue ">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">×</button>
-                                        <h4 class="text-white modal-title" id="myModalLabel">Pagar en efectivo</h4>
-                                    </div>
-                                    <div  class="bg-dark-blue text-center modal-body">
-                                             <div class="col_full">
-                                                 <img src= "<?php echo base_url("assets/images/bg-image/stores151x30.webp");?>" width="151" alt="cards">
-                                            </div>
-                                            <div class="  bg-dark-blue col_full">
-                                                <label><a class="text-blue" id="download-ticket-openpay" href="ticketdepago.pdf" download="ticketdepago.pdf">Descargar orden de pago</a></label>
-                                            </div>
-                                            <div class=" bg-dark-blue col_full">
-                                                <p>Descárgalo y sigue las instrucciones especificadas en el documento.</p>
-                                            </div>
-                                        </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default " data-dismiss="modal">Cerrar</button>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     
 

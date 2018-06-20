@@ -15,31 +15,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
  	}
 
- 	public function login ($username, $password){
+ 	public function login ($email, $password){
 
- 		$this->db->where('username', $username);
+ 		$this->db->where('email', $email);
  		$this->db->where('password',$password);
  		$q=$this->db->get('usuarios');
  	   	
- 		if ($q->num_rows()>0) 
+ 		if ($q->num_rows() > 0) 
  		{
+ 			return $q->row();
+ 		}
  		
+ 		return false;
+ 	}
+ 	
+ 	public function guardar($data){
+
+ 		$this->db->INSERT("usuarios",$data);
+ 		if ($this->db->affected_rows()>0) {
+ 			# code...
  			return true;
- 		}else
- 		{
+ 		}
+ 		else{
  			return false;
  		}
-
-
  	}
- 	public function register(){
- 		return $this->db->query("SELECT id,username,password,address,country,city,state,phone,email FROM usuarios")->result();
- 	}
- 	public function setRegister(string $username, string $password,string $address,           						  string $country, string $city, string $state,  string $phone,
- 								 string $email, string $last_name)
- 	{
- 		
+ 	public function Actualizar($id, $data){
 
- 		return $this->db->query("INSERT INTO usuarios(username, password, address, country, city, state, phone, email, last_name)values({$username},{$password},{$address},{$country},{$city},{$state},{$phone},{$email}, {$last_name})");
+ 		$this->db->set($datos);
+
+ 		$this->db->where('id',$id);
+
+ 		if (!$this->db->update('usuarios') 
+ 			return $this->db->error()['message'];
+ 			if (!$this->db->affected_rows())
+ 			return "Not found id:".$id;
+			
+			return true;
  	}
- } 
+}
+

@@ -1,7 +1,8 @@
 
 
-        <div id="page" class="page">
-        <?php include('header2.php'); ?>
+  <div id="page" class="page">
+        <?php include('header3.php'); ?>
+ 
         <section class=" padding-110px-tb bg-dark-blue builder-bg contact-form-style1 xs-padding-60px-tb border-none" id="contact-section20">
 
                 <div class="container">
@@ -13,7 +14,7 @@
 
                                 <h5 class="alt-font md-padding-fourteen font-weight-100 text-white display-block tz-text margin-fifteen-bottom font-size:2.2em" >ACTUALIZAR CONTRASEÑA</h5>
                                   <!-- contact form -->
-                                <form action="javascript:void(0)" method="post" >
+                                <form action="<?php base_url();?>Check_in/modifyUser" method="POST"  >
                                      <div class="col-md-12">
                                       <input type="text" class="form-control border-radius-8" placeholder="* Contraseña actual">
                                     </div>
@@ -36,37 +37,37 @@
                             <div class=" padding-nine   bg-black-light-rgba tz-background-color xs-padding-eleven border-radius-8 col-lg-12  margin-top25">
                                 <h5 class="font-weight-100 md-padding-fourteen text-white display-block tz-text margin-six-bottom txtcenter font-size:2.2em" >ACTUALIZAR TUS DATOS PERSONALES</h5>
                                   <!-- contact form -->
-                                <form>
+                                <form action="<?php base_url();?>Profile/modifyUser" method="POST">
                                   <div class="row">
                                     <div class="col-md-6">
-                                      <input type="text" class="form-control border-radius-8" placeholder="* Nombre(s)">
+                                      <input type="text" class="form-control border-radius-8" placeholder="* Nombre(s)" value=<?=$this->session->userdata('username')?>>
                                     </div>
                                     <div class="col-md-6">
-                                      <input type="text" class="form-control border-radius-8" placeholder="* Apellidos">
+                                      <input type="text" class="form-control border-radius-8" placeholder="* Apellidos" value=<?=$this->session->userdata('last_name')?>>
                                     </div>
                                   </div>
                                   <div class="row">
                                     <div class="col-md-6">
-                                      <input type="text" class="form-control border-radius-8" placeholder="* Correo Electronico">
+                                      <input type="text" class="form-control border-radius-8" placeholder="* Correo Electronico" value= <?=$this->session->userdata('email')?>>
                                     </div>
                                     <div class="col-md-6">
-                                      <input type="text" class="form-control border-radius-8" placeholder="* Télefono">
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-md-6">
-                                      <input type="text" class="form-control border-radius-8" placeholder="* Dirección">
-                                    </div>
-                                    <div class="col-md-6">
-                                      <input type="text" class="form-control border-radius-8" placeholder="* Ciudad">
+                                      <input type="text" class="form-control border-radius-8" placeholder="* Télefono" value= <?=$this->session->userdata('phone')?>>
                                     </div>
                                   </div>
                                   <div class="row">
                                     <div class="col-md-6">
-                                      <input type="text" class="form-control border-radius-8" placeholder="* País">
+                                      <input type="text" class="form-control border-radius-8" placeholder="* Dirección"  value= <?=$this->session->userdata('address')?>>
                                     </div>
                                     <div class="col-md-6">
-                                      <input type="text" class="form-control border-radius-8" placeholder="* Estado">
+                                      <input type="text" class="form-control border-radius-8" placeholder="* Ciudad" value= <?=$this->session->userdata('city')?>>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <input type="text" class="form-control border-radius-8" placeholder="* País"  value= <?=$this->session->userdata('country')?>>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <input type="text" class="form-control border-radius-8" placeholder="* Estado" value= <?=$this->session->userdata('state')?>>
                                     </div>
                                   </div>
 
