@@ -40,18 +40,49 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  			return false;
  		}
  	}
- 	public function Actualizar($id, $data){
+    public function getCurrPassword($userid){
 
- 		$this->db->set($datos);
+        $query=$this->db->where(['id'=>$userid])
+                        ->get('usuarios');
+        if ($query->num_rows()>0) {
 
- 		$this->db->where('id',$id);
+            # code...
+            return $query->row();
+        }
+    }
+    public function updatePassword($data,$id){
+        $this->db->where('id',$id);
+        $data= array(
+           'password'=>$data['password']    
+        );
+        return $this->db->update('usuarios',$data);
+    }
+    public function actualizarDatoos($id,$campos){
+         $this->db->where('id',$id);
+         $this->db->update('usuarios', $campos);
+      
 
- 		if (!$this->db->update('usuarios') 
- 			return $this->db->error()['message'];
- 			if (!$this->db->affected_rows())
- 			return "Not found id:".$id;
-			
-			return true;
+     
+     
+     
+
  	}
+
+
+    public function verify_reset_Password_Code(){
+
+    }
+
+    public function email_exist($email){
+        $sql="SELECT username, email FROM usuarios where email='{$email}'LIMIT 1";
+        $result=$this->db->query($sql);
+        $row=$result->row();
+
+        return ($result->num_rows()===1 && $row->email)? $row->username :false;
+
+    }
+    
+
+
 }
 

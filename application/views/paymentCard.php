@@ -100,4 +100,4 @@
 			 </div>
 		</div>
      
-</section>    <?php include('footer.php'); ?></div>        
+</section>    <?php include('footer2.php'); ?></div>        

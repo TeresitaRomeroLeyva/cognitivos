@@ -11,6 +11,6 @@ class Catalog2 extends CI_Controller {
 
 		$this->load->view('header3',$data);
 		$this->load->view('catalog2',$data);
-		$this->load->view('footer',$data);
+		$this->load->view('footer2',$data);
     }
 }

@@ -10,17 +10,19 @@ class Log_in extends CI_Controller {
        
         $this->load->view('login',$data);
         $this->load->library('form_validation');
+         $this->load->model('Users_model');
 
         $data['test'] = "mensaje de prueba";
        
         if ($this->input->post('password',TRUE)) {
         	# code...
-              $this->load->model('users_model');
-        	if ($q = $this->users_model->login($_POST['email'],$_POST['password'])) 
+             
+        	if ($q = $this->Users_model->login($_POST['email'],$_POST['password'])) 
         	{
         		
                 $data=[
 
+                    "id"=>$q->id,
                     "username"=>$q->username,
                     "last_name"=>$q->last_name,
                     "email"=>$q->email,
@@ -42,11 +44,8 @@ class Log_in extends CI_Controller {
         	}
 
                 redirect('Log_in');
-
-
-    	
-    		
+	
 
         }
-    }
+    } 
 }

@@ -158,7 +158,7 @@
                         <!-- end feature box -->
                     </div>
                 </div>                
-            </section><?php include('footer.php'); ?></div><!-- /#page -->
+            </section><?php include('footer2.php'); ?></div><!-- /#page -->
 
 
         <!-- javascript libraries -->
