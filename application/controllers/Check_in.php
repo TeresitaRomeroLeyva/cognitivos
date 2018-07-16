@@ -32,7 +32,7 @@ class Check_in extends CI_Controller {
 		$username=$this->input->post("username");
 		$last_name=$this->input->post("last_name");
  		$password=$this->input->post("password");
- 	 	$address=$this->input->post("address");
+ 	 	$address1=$this->input->post("address1");
  		$country=$this->input->post("country");
  		$city=$this->input->post("city");
  		$state=$this->input->post("state");
@@ -44,12 +44,12 @@ class Check_in extends CI_Controller {
  		$this->form_validation->set_rules('last_name','Apellidos');
  		$this->form_validation->set_rules('password','contraseña','required|matches[confirm_pass]|min_length[8]|max_length[20]');
  		$this->form_validation->set_rules('confirm_pass','Confirmar contraseña', 'required');
- 		$this->form_validation->set_rules('address','Direccion', 'required');
+ 		$this->form_validation->set_rules('address1','Direccion', 'required');
  		$this->form_validation->set_rules('country','pais','required');
  		$this->form_validation->set_rules('city','Ciudad', 'required');
  		$this->form_validation->set_rules('state','Estado', 'required');
  		$this->form_validation->set_rules('phone','Telefono','numeric|min_length[10]|max_length[10]');
- 		$this->form_validation->set_rules('email','Correo electronico','valid_email|is_unique[usuarios.email]');
+ 		$this->form_validation->set_rules('email','Correo electronico','valid_email|is_unique[usersusers.email]');
 
       $this->form_validation->set_message('is_unique', 'El %s ya esta registrado, porfavor inserte uno nuevo.');
       
@@ -60,7 +60,7 @@ class Check_in extends CI_Controller {
  				"username"=>$username,
 				"last_name"=>$last_name,
 				"password"=>$password,
-				"address"=>$address,
+				"address1"=>$address1,
 				"country"=>$country,
 				"city"=>$city,
 				"state"=>$state, 
@@ -68,7 +68,7 @@ class Check_in extends CI_Controller {
 				"email"=>$email
 
 			);
-			if ($this->Users_model->guardar($datos)==true) 
+			if ($this->Users_model->guardar($datos, $id)==true) 
 				
 				# code...
 			$this->session->set_flashdata('success', "Registro existoso, ya puede iniciar sesiòn");

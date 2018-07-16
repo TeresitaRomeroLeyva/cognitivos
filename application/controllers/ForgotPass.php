@@ -17,33 +17,33 @@ public function index(){
 		$this->load->view('forgotPass',$data);
 		$this->load->view('footer',$data);
 }
- public function reset_password(){
+ public function send(){
 
-        if (isset($_POST['email'])&& !empty($_POST['email'])) {
+        //if (isset($_POST['email']) && $_POST['email']=='true') {
+            $this->load->library('email');
             # code...
-            $this->load->library('form_validation');
+            /*$this->load->library('form_validation');
             $this->form_validation->set_rules('email', "Email",'valid_email|xss_clean');
+            $this->form_validation->set_rules('password','Password','required|trim|xss_clean|md5');
+            $this->form_validation->set_message('required', 'El %s es requerido');
+            $this->form_validation->set_message('valid_email', 'El %s no es válido');
+
+
             if ($this->form_validation->run()==FALSE) {
                 # code...
-                redirect ('ForgotPass', array('error'=>'Inserte un correo valido'));
-            }else{
-                $email= trim($this->input->post('email'));
-                $result=$this->Users_model->email_exists($email);
+                $this->index();
+            }else{*/
+                $Password="x";//$this->input->post('password');
+                $email="tromero@somos.mx";//$this->input->post('email');
 
-                if ($result) {
-                    # code...
-                    $this->send_reset_password_email($email, $result);
-                    $this->load->view('Log_in', array('email'=>$email));
+                //$insert=$this->Users_model->recovery($password,$email);
+                $this->email->from('romeroteresita.10@gmail.com');
+                $this->email->to($email);
+                $this->email->message('<h2>'.$email.'Haz solicitado una nueva contraseña</h2><hr><br><br> tu password es: '.$Password);
+                $this->email->send();
+            //}
 
-                }else
-                {
-                    $this->load->view('ForgotPass', array('error'=>'El email no esta registrado'));
-                }
-            }
-
-        }else{
-            $this->load->view('ForgotPass');
-        }
+        //}
     }
 
 

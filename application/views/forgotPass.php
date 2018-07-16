@@ -12,7 +12,7 @@
                             <div class="padding-eighteen bg-black-light-rgba tz-background-color xs-padding-eleven border-radius-8">
                                 <h5 class="alt-font font-weight-100 text-white display-block tz-text margin-fifteen-bottom font-size: 2.2em" >Recuperar contraseña</h5>
                                 <P>Escribe tu cuenta de email abajo para enviar tu nueva contraseña.</P>
-                                <form action="<?php base_url();?>ForgotPass/reset_password" method="POST">
+                                <form action="<?php base_url();?>ForgotPass/send" method="POST">
                                     
                                         <div class=" border-radius-4 bg-danger danger"><?= $errors; ?></div> 
                                         <div class=" border-radius-4 alert-success success" ><?= $success; ?></div>
@@ -21,7 +21,7 @@
                                        
                                                                                
                                                           
-                                            <button  class= "btn-medium btn btn-circle bg-blue text-white no-letter-spacing"  type="submit">Restablecer contraseña</button>                                      
+                                            <button  class= "btn-medium btn btn-circle bg-blue text-white no-letter-spacing" value="enviar" type="submit">Enviar</button>                                      
                                 </form>
                             </div>
 
@@ -30,4 +30,8 @@
                     </div>
                 </div>
         </section>
+
     </div>
+    
+    
+  

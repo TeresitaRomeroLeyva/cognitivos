@@ -85,4 +85,41 @@ class Profile extends CI_Controller {
             
             
 }
+ public function send($email,$type, $data){
+
+        $this->load->library('email');
+        $this->email->set_mailtype("html");
+        $this->email->from($this->config->item('tromero@somos.mx'), $this->config->item('website_name'));
+        $this->email->reply_to($this->config->item('tromero@somos.mx'), $this->config->item('website_name'));
+        $this->email->to($email);
+        $this->email->subject(sprintf($this->lang->line('auth_subject_'.$type), $this->config->item('website_name')));
+        $this->email->message($this->load->view('email/'.$type.'-html', $data, TRUE));
+        $this->email->set_alt_message($this->load->view('email/'.$type.'-txt', $data, TRUE));
+        $this->email->send();
+    
+
+    }
+    pruba email
+                $this->load->library('email');
+            # code...
+            /*$this->load->library('form_validation');
+            $this->form_validation->set_rules('email', "Email",'valid_email|xss_clean');
+            $this->form_validation->set_rules('password','Password','required|trim|xss_clean|md5');
+            $this->form_validation->set_message('required', 'El %s es requerido');
+            $this->form_validation->set_message('valid_email', 'El %s no es válido');
+
+
+            if ($this->form_validation->run()==FALSE) {
+                # code...
+                $this->index();
+            }else{*/
+                $Password="x";//$this->input->post('password');
+                $email="tromero@somos.mx";//$this->input->post('email');
+
+                //$insert=$this->Users_model->recovery($password,$email);
+                $this->email->from('romeroteresita.10@gmail.com');
+                $this->email->to($email);
+                $this->email->message('<h2>'.$email.'Haz solicitado una nueva contraseña</h2><hr><br><br> tu password es: '.$Password);
+                $this->email->send();
+
 }

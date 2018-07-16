@@ -28,7 +28,7 @@
                                   </div>
                                   <div class="row">
                                     <div class="col-md-6">
-                                      <input value="" type="text" required="true" class="form-control border-radius-8" name="address" placeholder="* Dirección">
+                                      <input value="" type="text" required="true" class="form-control border-radius-8" name="address1" placeholder="* Dirección">
                                     </div>
                                     <div class="col-md-6">
 

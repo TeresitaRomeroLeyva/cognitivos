@@ -12,7 +12,7 @@ class Profile extends CI_Controller {
 		$data['errors'] = $this->session->flashdata('errors');
 		$data['success']=$this->session->flashdata('success');
 
-		 $q=$this->db->get('usuarios');
+		 $q=$this->db->get('usersusers');
 		$this->load->view('myProfile',$data);
 		$this->load->model('Users_model');
 	

@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
  		$this->db->where('email', $email);
  		$this->db->where('password',$password);
- 		$q=$this->db->get('usuarios');
+ 		$q=$this->db->get('usersusers');
  	   	
  		if ($q->num_rows() > 0) 
  		{
@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  	
  	public function guardar($data){
 
- 		$this->db->INSERT("usuarios",$data);
+ 		$this->db->INSERT("usersusers",$data);
  		if ($this->db->affected_rows()>0) {
  			# code...
  			return true;
@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     public function getCurrPassword($userid){
 
         $query=$this->db->where(['id'=>$userid])
-                        ->get('usuarios');
+                        ->get('usersusers');
         if ($query->num_rows()>0) {
 
             # code...
@@ -55,34 +55,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $data= array(
            'password'=>$data['password']    
         );
-        return $this->db->update('usuarios',$data);
+        return $this->db->update('usersusers',$data);
     }
     public function actualizarDatoos($id,$campos){
          $this->db->where('id',$id);
-         $this->db->update('usuarios', $campos);
+         $this->db->update('usersusers', $campos);
       
-
-     
-     
-     
-
- 	}
+	}
 
 
-    public function verify_reset_Password_Code(){
+    public function recovery($password, $email){
 
-    }
-
-    public function email_exist($email){
-        $sql="SELECT username, email FROM usuarios where email='{$email}'LIMIT 1";
-        $result=$this->db->query($sql);
-        $row=$result->row();
-
-        return ($result->num_rows()===1 && $row->email)? $row->username :false;
+                $data = array(
+            'email'=>$email,
+            'password' => $password
+        );
+        return $this->db->insert('usersusers', $data);
 
     }
-    
 
-
-}
+    }
 

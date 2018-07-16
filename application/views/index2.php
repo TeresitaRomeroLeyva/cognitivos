@@ -67,9 +67,9 @@
                                         <li class="propClone"><a class="inner-link" href="<?php echo base_url()?>Home2" >Inicio</a></li>
                                         
                                         <li class="propClone"><a class="inner-link" href="<?php echo base_url()?>Catalog2" >Catalogo</a></li>
-                                        <li class="dropdown">
+                                                                                <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 
-                                                <i class="fa fa-user fa-fw"></i><?=$this->session->userdata('username')?><b class="caret"></b>
+                                                <i class="fa fa-user fa-fw"></i><span>Hi <?=$this->session->userdata('username')?></span><b class="caret"></b>
                                             </a>
                                         <ul class="dropdown-menu text-black">
                                         <li class="propClone "><a class="inner-link" href="<?php echo base_url()?>Profile">Perfil</a></li>
