@@ -12,7 +12,13 @@
                             <div class="padding-eighteen bg-black-light-rgba tz-background-color xs-padding-eleven border-radius-8">
                                 <h5 class="alt-font font-weight-100 text-white display-block tz-text margin-fifteen-bottom font-size: 2.2em" >Recuperar contraseña</h5>
                                 <P>Escribe tu cuenta de email abajo para enviar tu nueva contraseña.</P>
-                                <form action="<?php base_url();?>ForgotPass/send" method="POST">
+                                    <?php
+                                    if($this->session->flashdata('envio')){
+                                        echo $this->session->flashdata('envio');
+                                            }
+                                            ?>
+
+                                <form action="<?php base_url();?>ForgotPass/send_email" method="POST">
                                     
                                         <div class=" border-radius-4 bg-danger danger"><?= $errors; ?></div> 
                                         <div class=" border-radius-4 alert-success success" ><?= $success; ?></div>

@@ -56,45 +56,51 @@ class Profile extends CI_Controller {
     }
     	
     	public function actualizarDatos(){
+            
             $this->load->model('Users_model');
-
-        $username=$this->input->post("username");
-        $last_name=$this->input->post("last_name");
-        $password=$this->input->post("password");
-        $address=$this->input->post("address");
-        $country=$this->input->post("country");
-        $city=$this->input->post("city");
-        $state=$this->input->post("state");
-        $phone=$this->input->post("phone");
-        $email=$this->input->post("email");
-      
-        $this->form_validation->set_rules('username','Nombre(s)','required|min_length[5]');
-        $this->form_validation->set_rules('last_name','Apellidos');
-        $this->form_validation->set_rules('address','Direccion');
-        $this->form_validation->set_rules('country','pais');
-        $this->form_validation->set_rules('city','Ciudad');
-        $this->form_validation->set_rules('state','Estado' );
-        $this->form_validation->set_rules('phone','Telefono','numeric|min_length[10]|max_length[10]');
-        $this->form_validation->set_rules('email', 'Email', 'valid_email');
+            $username=$this->input->post("username");
+            $last_name=$this->input->post("last_name");
+            $password=$this->input->post("password");
+            $address=$this->input->post("address");
+            $country=$this->input->post("country");
+            $city=$this->input->post("city");
+            $state=$this->input->post("state");
+            $phone=$this->input->post("phone");
+            $email=$this->input->post("email");
+          
+            $this->form_validation->set_rules('username','Nombre(s)','required|min_length[5]');
+            $this->form_validation->set_rules('last_name','Apellidos');
+            $this->form_validation->set_rules('address','Direccion');
+            $this->form_validation->set_rules('country','pais');
+            $this->form_validation->set_rules('city','Ciudad');
+            $this->form_validation->set_rules('state','Estado' );
+            $this->form_validation->set_rules('phone','Telefono','numeric|min_length[10]|max_length[10]');
+            $this->form_validation->set_rules('email', 'Email', 'valid_email');
+        
         if ($this->form_validation->run()=== true) {
-            # code...
-            $datos=array(
-                "username"=>$username,
-                "last_name"=>$last_name,
-                "address"=>$address,
-                "country"=>$country,
-                "city"=>$city,
-                "state"=>$state, 
-                "phone"=>$phone,
-                "email"=>$email
+                # code...
+                $datos=array(
+                    "username"=>$username,
+                    
+                    "email"=>$email,
+                    "gid"=>5
 
-            );
-              
+                );
+                $perfil=array(
 
-            $datos['id'] = $this->session->userdata('id');
-            $this->session->set_userdata($datos);
+                    "last_name"=>$last_name,
+                    "address"=>$address,
+                    "country"=>$country,
+                    "city"=>$city,
+                    "state"=>$state, 
+                    "phone"=>$phone
 
-            if ($this->Users_model->actualizarDatoos($this->session->userdata('id'),$datos)==true) 
+                );
+                  
+
+                $datos['id'] = $this->session->userdata('id');
+
+            if ($this->Users_model->updateData($this->session->userdata('id'),$datos, $perfil)==true) 
                 {
 
 

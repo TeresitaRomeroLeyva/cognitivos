@@ -58,17 +58,23 @@ class Check_in extends CI_Controller {
  			# code...
  			$datos=array(
  				"username"=>$username,
-				"last_name"=>$last_name,
+				
 				"password"=>$password,
-				"address1"=>$address1,
+				
+				"email"=>$email,
+				"gid"=>5
+
+			);
+			$perfil=array(
+				"first_name"=>$username,
+				"last_name"=>$last_name,
+			    "address1"=>$address1,
 				"country"=>$country,
 				"city"=>$city,
 				"state"=>$state, 
-				"phone"=>$phone,
-				"email"=>$email
-
+				"phone"=>$phone
 			);
-			if ($this->Users_model->guardar($datos, $id)==true) 
+			if ($this->Users_model->register($datos, $perfil)==true) 
 				
 				# code...
 			$this->session->set_flashdata('success', "Registro existoso, ya puede iniciar sesiòn");

@@ -1,20 +1,31 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed.');
+/*
+        * Configuramos los parámetros para enviar el email,
 
-$config['useragent']        = 'Codeigniter';
-$config['protocol']         = 'smtp';
-$config['smtp_host']        = 'tls://email-smtp.us-east-1.amazonaws.com';
-$config['smtp_user']        = 'AKIAI5YDATZLXW2ITSAQ';
-$config['smtp_pass']        = 'AtOTw7l12q0LMyOQNTq7ugwwS7xw0S9ppUzCGw4dsYDw';
-$config['smtp_port']        = 587;
-$config['smtp_timeout']     = 7;
-$config['smtp_crypto']      = 'tls';
-$config['smtp_debug']       = 0;
-$config['wordwrap']         = TRUE;
-$config['wrapchars']        = 76;
-$config['mailtype']         = 'html';
-$config['charset']          = 'utf-8';
-$config['validate']         = TRUE;
-$config['crlf'] = "\r\n";
-$config['newline'] = "\r\n";
-$config['bcc_batch_mode']   = false;
-$config['bcc_batch_size']   = 200;
+        */
+        
+       //Indicamos el protocolo a utilizar
+        $config['protocol'] = 'smtp';
+         
+       //El servidor de correo que utilizaremos
+        $config["smtp_host"] = 'smtp.yandex.com';
+         
+       //Nuestro usuario
+        $config["smtp_user"] = 'no-reply@somos.mx';
+         
+       //Nuestra contraseña
+        $config["smtp_pass"] = 'somosmultimedia';    
+         
+       //El puerto que utilizará el servidor smtp
+        $config["smtp_port"] = '465';
+        
+        $config["smtp_crypto"] = 'ssl';
+       //El juego de caracteres a utilizar
+        $config['charset'] = 'utf-8';
+ 
+       //Permitimos que se puedan cortar palabras
+        $config['wordwrap'] = TRUE;
+         
+       //El email debe ser valido  
+       $config['validate'] = true;
+             

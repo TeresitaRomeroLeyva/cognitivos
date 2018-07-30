@@ -11,10 +11,11 @@
                         <div class="col-md-offset-3 col-sm-offset-3 col-md-6 col-sm-6 col-xs-12 txtcenter" >
                             <div class="padding-eighteen bg-black-light-rgba tz-background-color xs-padding-eleven border-radius-8">
                                 <h5 class="alt-font font-weight-100 text-white display-block tz-text margin-fifteen-bottom font-size: 2.2em" >Entrar a MPCognitivos</h5>
+                                <div id="message_pass_errors" class=" border-radius-4 bg-danger danger"><?= $errors; ?></div> 
+                                <div id="message_pass_success" class=" border-radius-4 alert-success success" ><?= $success; ?></div>
                                 <form action="<?php base_url();?>Log_in/index" method="POST">
                                     
-                                        <div class=" border-radius-4 bg-danger danger"><?= $errors; ?></div> 
-                                        <div class=" border-radius-4 alert-success success" ><?= $success; ?></div>
+                                    
 
                                             <input type="text" required="true" name="email" data-email="required" id="email" placeholder="* Tu email"  class="medium-input  border-radius-8">   
                                        

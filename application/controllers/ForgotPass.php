@@ -7,45 +7,101 @@ class forgotPass extends CI_Controller {
 		$this->load->model('Users_model');
 
 	}
-public function index(){
+    public function index(){
 
-		$data['test'] = "mensaje de prueba";
-		$data['errors'] = $this->session->flashdata('errors');
-		$data['success']=$this->session->flashdata('success');
-    	$this->load->database();
-		$this->load->view('header2',$data);
-		$this->load->view('forgotPass',$data);
-		$this->load->view('footer',$data);
+        $data['test'] = "mensaje de prueba";
+        $data['errors'] = $this->session->flashdata('errors');
+        $data['success']=$this->session->flashdata('success');
+        $this->load->database();
+        $this->load->view('header2',$data);
+        $this->load->view('forgotPass',$data);
+        $this->load->view('footer',$data);
 }
- public function send(){
+    public function getRandomCode(){
+        $an = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        $su = strlen($an) - 1;
+        return substr($an, rand(0, $su), 1) .
+                substr($an, rand(0, $su), 1) .
+                substr($an, rand(0, $su), 1) .
+                substr($an, rand(0, $su), 1) .
+                substr($an, rand(0, $su), 1) .
+                substr($an, rand(0, $su), 1);
+   }
+    public function changepass_post()
+    {
+      
+          $newpass=$this->getRandomCode();
+          $output = $this->Users_model->change_password($newpass);
+          if ($output != null) {
+          
+               $message = [
+                                'status' => true,
+                                'message' => "new password",
+                                'data' =>$newpass
+                        ];
+                  $this->response($message, REST_Controller::HTTP_OK);
+            }else{
+            $message = [
+                            'status' => FALSE,
+                            'message' => "error"
+                        ];
+                        $this->response($message, REST_Controller::HTTP_INTERNAL_SERVER_ERROR);
+          }
+  }
 
-        //if (isset($_POST['email']) && $_POST['email']=='true') {
-            $this->load->library('email');
-            # code...
-            /*$this->load->library('form_validation');
-            $this->form_validation->set_rules('email', "Email",'valid_email|xss_clean');
-            $this->form_validation->set_rules('password','Password','required|trim|xss_clean|md5');
-            $this->form_validation->set_message('required', 'El %s es requerido');
-            $this->form_validation->set_message('valid_email', 'El %s no es válido');
 
+    public function send_email(){ 
 
-            if ($this->form_validation->run()==FALSE) {
-                # code...
-                $this->index();
-            }else{*/
-                $Password="x";//$this->input->post('password');
-                $email="tromero@somos.mx";//$this->input->post('email');
+       //cargamos la libreria email de ci
+        $this->load->library('email');
+                     $newpass=$this->getRandomCode();
+ $output = $this->Users_model->change_password($newpass);
+            
+          //Establecemos esta configuración
+     
+     
+          //Ponemos la dirección de correo que enviará el email y un nombre
+            $this->email->from('no-reply@somos.mx', '');
+             
+          /*
+           * Ponemos el o los destinatarios para los que va el email
+           */
+            $this->email->to($this->input->post("email"));
+             
+          //Definimos el asunto del mensaje
+            $this->email->subject("SOLICITUD DE NUEVA CONTRASEÑA");
+             
+          //Definimos el mensaje a enviar
+               
+            $this->email->message(
+                    "Email: ".$this->input->post("email"). 
+                     ' Mensaje: Haz solicitado una nueva contraseña.
+                      Tu nueva contraseña es:'.$newpass
+                    );
+           
+            //Enviamos el email y si se produce bien o mal que avise con una flasdata
 
-                //$insert=$this->Users_model->recovery($password,$email);
-                $this->email->from('romeroteresita.10@gmail.com');
-                $this->email->to($email);
-                $this->email->message('<h2>'.$email.'Haz solicitado una nueva contraseña</h2><hr><br><br> tu password es: '.$Password);
-                $this->email->send();
-            //}
+            if($this->email->send()){
 
-        //}
+                $this->session->set_flashdata('envio', 'Se ha enviado una nueva contraseña a tu correo');
+            }else{
+                       
+
+                $this->session->set_flashdata('envio', 'No se a enviado el email, ingrese un correo valido');
+            }
+             
+            redirect(base_url("forgotPass"));
+                                   
     }
-
-
-
 }
+ 
+
+                               
+
+
+
+             
+
+
+
+

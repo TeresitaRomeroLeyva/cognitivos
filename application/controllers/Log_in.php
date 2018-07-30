@@ -20,18 +20,7 @@ class Log_in extends CI_Controller {
         	if ($q = $this->Users_model->login($_POST['email'],$_POST['password'])) 
         	{
         		
-                $data=[
-
-                    "id"=>$q->id,
-                    "username"=>$q->username,
-                    "last_name"=>$q->last_name,
-                    "email"=>$q->email,
-                    "phone"=>$q->phone,
-                    "address"=>$q->address,
-                    "city"=>$q->city,
-                    "country"=>$q->country,
-                    "state"=>$q->state
-                ];
+               
                 $this->session->set_userdata($data);
                 redirect('Home2');
         	
